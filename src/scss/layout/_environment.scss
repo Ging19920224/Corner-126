@@ -1,0 +1,68 @@
+.environment{
+  width: 100%;
+  padding: 40px 0 80px 0;
+  opacity: 0;
+  @include iPhone-X-horizontal{
+    padding: 50px 0 20px 0;
+  }
+  @include iPhone6-horizontal{
+    padding: 50px 0 20px 0;
+  }
+  @include Mobile-horizontal{
+    padding: 20px 0 20px 0;
+  }
+  .environment__img{
+    width: 100%;
+    height: 350px;
+    box-shadow: 2px 2px 5px $color-dark;
+    @include tablet-horizontal{
+      height: 280px;
+    }
+    @include iPhone-X-horizontal{
+      height: 200px;
+    }
+    @include tablet{
+      height: 240px;
+    }
+    @include iPhone6-horizontal{
+      height: 200px;
+    }
+    @include Mobile-horizontal{
+      width: 80%;
+      height: 280px;
+      margin-bottom: 20px;
+    }
+    @include Mobile{
+      height: 200px;
+    }
+    @include iPhone5{
+      height: 160px;
+    }
+  }
+  h2{
+    @include title;
+  }
+  h3{
+    font-size: $text-sm;
+    color: $color-primary;
+    @include tablet-horizontal{
+      width: 100%;
+    }
+  }
+  p{
+    font-size: $text-xs;
+    color: $color-primary;
+    margin-top: 5px;
+    @include tablet-horizontal{
+      width: 100%;
+    }
+    @include Mobile-horizontal{
+      font-size: 13px;
+    }
+  }
+  .mr--45{
+    @include Mobile-horizontal{
+      margin-right: 0px;
+    }
+  }
+}

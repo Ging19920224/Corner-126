@@ -1,0 +1,70 @@
+.contact{
+  padding: 80px 0px;
+  height: auto;
+  background-color: $color-dark-opacity;
+  opacity: 0;
+  h2{
+    @include title;
+  }
+  .googleMap {
+    padding-bottom: 75%; /* 4:3 ratio*/
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+  p{
+    font-size: $text-xs;
+    font-weight: bold;
+    color: $color-primary;
+    line-height: 80px;
+    @include desktop-md{
+      font-size: 17px;
+      line-height: 60px;
+    }
+    @include tablet-horizontal{
+      line-height: 35px;
+    }
+    @include iPhone6-horizontal{
+      font-size: 15px;
+    }
+    @include Mobile-horizontal{
+      font-size: 15px;
+      line-height: 45px;
+    }
+    @include Mobile{
+      font-size: 14px;
+      text-align-last: left;
+    }
+    a{
+      color: $color-primary;
+      &:hover{
+        color: $color-light;
+        text-shadow: 1px 1px 5px $color-dark;
+      }
+    }
+  }
+  h3 a{
+    color: $color-light;
+    text-shadow: 1px 1px 1px $color-dark;
+  }
+  .fb{
+    padding: 10px 18px;
+    background-color: rgb(0, 68, 216);
+    font-size: 30px;
+    box-shadow: 1px 1px 5px $color-dark;
+    &:hover{
+      transition: all 0.3s;
+      transform: translate(-2px,-2px);
+      box-shadow: 5px 5px 5px $color-dark;
+    }
+  }
+  .mr--30{
+    @include Mobile{
+      margin-right: 0px;
+    }
+  }
+}

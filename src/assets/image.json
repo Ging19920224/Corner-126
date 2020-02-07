@@ -1,0 +1,283 @@
+[
+  {
+    "name": "乾麵",
+    "type": "noodle",
+    "id": "0",
+    "price_s": "45",
+    "price_m": "50",
+    "imgUrl": "images/food_menu/food-0.png"
+  },
+  {
+    "name": "湯麵",
+    "type": "noodle",
+    "id": "1",
+    "price_s": "45",
+    "price_m": "50",
+    "imgUrl": "images/food_menu/food-1.png"
+  },
+  {
+    "name": "麻醬麵",
+    "type": "noodle",
+    "id": "2",
+    "price_s": "50",
+    "price_m": "55",
+    "imgUrl": "images/food_menu/food-2.png"
+  },
+  {
+    "name": "牛肉麵",
+    "type": "noodle",
+    "id": "3",
+    "price_s": "90",
+    "price_m": "100",
+    "imgUrl": "images/food_menu/food-3.png"
+  },
+  {
+    "name": "餛飩麵",
+    "type": "noodle",
+    "id": "4",
+    "price_s": "55",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-4.png"
+  },
+  {
+    "name": "米粉湯",
+    "type": "noodle",
+    "id": "5",
+    "price_s": "40",
+    "price_m": "50",
+    "imgUrl": "images/food_menu/food-5.png"
+  },
+  {
+    "name": "鍋燒意麵",
+    "type": "noodle",
+    "id": "6",
+    "price_s": "50",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-6.png"
+  },
+  {
+    "name": "鍋燒冬粉",
+    "type": "noodle",
+    "id": "7",
+    "price_s": "50",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-7.png"
+  },
+  {
+    "name": "鴨肉麵羹",
+    "type": "noodle",
+    "id": "8",
+    "price_s": "55",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-8.png"
+  },
+  {
+    "name": "鴨肉米粉羹",
+    "type": "noodle",
+    "id": "9",
+    "price_s": "55",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-9.png"
+  },
+  {
+    "name": "鴨肉冬粉湯",
+    "type": "noodle",
+    "id": "10",
+    "price_s": "55",
+    "price_m": "65",
+    "imgUrl": "images/food_menu/food-10.png"
+  },
+  {
+    "name": "粄條",
+    "type": "noodle",
+    "id": "11",
+    "price_s": "45",
+    "price_m": "50",
+    "imgUrl": "images/food_menu/food-11.png"
+  },
+  {
+    "name": "肉絲炒飯",
+    "type": "rice",
+    "id": "12",
+    "price_s": "55",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-12.png"
+  },
+  {
+    "name": "蝦仁炒飯",
+    "type": "rice",
+    "id": "13",
+    "price_s": "65",
+    "price_m": "70",
+    "imgUrl": "images/food_menu/food-13.png"
+  },
+  {
+    "name": "培根炒飯",
+    "type": "rice",
+    "id": "14",
+    "price_s": "55",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-14.png"
+  },
+  {
+    "name": "肉燥飯",
+    "type": "rice",
+    "id": "15",
+    "price_s": "25",
+    "price_m": "35",
+    "imgUrl": "images/food_menu/food-15.png"
+  },
+  {
+    "name": "焢肉飯",
+    "type": "rice",
+    "id": "16",
+    "price_s": "40",
+    "price_m": "45",
+    "imgUrl": "images/food_menu/food-16.png"
+  },
+  {
+    "name": "海產粥",
+    "type": "rice",
+    "id": "17",
+    "price_s": "50",
+    "price_m": "60",
+    "imgUrl": "images/food_menu/food-17.png"
+  },
+  {
+    "name": "白飯",
+    "type": "rice",
+    "id": "18",
+    "price_s": "10",
+    "price_m": "15",
+    "imgUrl": "images/food_menu/food-18.png"
+  },
+  {
+    "name": "貢丸湯",
+    "type": "soup",
+    "id": "19",
+    "price_s": "25",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-19.png"
+  },
+  {
+    "name": "魚丸湯",
+    "type": "soup",
+    "id": "20",
+    "price_s": "25",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-20.png"
+  },
+  {
+    "name": "魚肚湯",
+    "type": "soup",
+    "id": "21",
+    "price_s": "50",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-21.png"
+  },
+  {
+    "name": "蚵仔湯",
+    "type": "soup",
+    "id": "22",
+    "price_s": "35",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-22.png"
+  },
+  {
+    "name": "蛤蠣湯",
+    "type": "soup",
+    "id": "23",
+    "price_s": "35",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-23.png"
+  },
+  {
+    "name": "豬血湯",
+    "type": "soup",
+    "id": "24",
+    "price_s": "25",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-24.png"
+  },
+  {
+    "name": "豬腸湯",
+    "type": "soup",
+    "id": "25",
+    "price_s": "30",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-25.png"
+  },
+  {
+    "name": "餛飩湯",
+    "type": "soup",
+    "id": "26",
+    "price_s": "25",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-26.png"
+  },
+  {
+    "name": "蛋花湯",
+    "type": "soup",
+    "id": "27",
+    "price_s": "20",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-27.png"
+  },
+  {
+    "name": "鴨肉湯",
+    "type": "soup",
+    "id": "28",
+    "price_s": "45",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-28.png"
+  },
+  {
+    "name": "大陸妹",
+    "type": "vegetables",
+    "id": "29",
+    "price_s": "35",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-29.png"
+  },
+  {
+    "name": "空心菜",
+    "type": "vegetables",
+    "id": "30",
+    "price_s": "30",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-30.png"
+  },
+  {
+    "name": "地瓜葉",
+    "type": "vegetables",
+    "id": "31",
+    "price_s": "30",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-31.png"
+  },
+  {
+    "name": "豆芽菜",
+    "type": "vegetables",
+    "id": "32",
+    "price_s": "30",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-32.png"
+  },
+  {
+    "name": "皮蛋豆腐",
+    "type": "vegetables",
+    "id": "33",
+    "price_s": "30",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-33.png"
+  },
+  {
+    "name": "油豆腐",
+    "type": "vegetables",
+    "id": "34",
+    "price_s": "5",
+    "price_m": "",
+    "imgUrl": "images/food_menu/food-34.png"
+  }
+
+]

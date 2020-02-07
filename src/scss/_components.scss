@@ -1,0 +1,129 @@
+#prev,#next{
+  font-size: 22px;
+  opacity: 1;
+  &:hover{
+    color: $color-vegetables;
+  }
+}
+.scrollTopBtn{
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  right: 30px;
+  bottom: 30px;
+  border: 1px solid $color-light;
+  background-color: $color-primary;
+  z-index: 2;
+  @include Mobile-horizontal{
+    bottom: 3px;
+    right: 3px;
+  }
+  @include Mobile{
+    bottom: 10px;
+    right: 10px;
+  }
+  i{
+    color: $color-light;
+  }
+  &:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+}
+.loading{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-light;
+  opacity: 1;
+  z-index: 10;
+  .loading__mask{
+    margin: 45vh auto;
+    background-color: $color-primary;
+    width: 30px;
+    height: 30px;
+    transition: all 1.0s;
+  }
+}
+.foodLightBox{
+  padding: 20px 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(54, 49, 49, 0.7);
+  opacity: 0;
+  z-index: -5;
+  transition: all 0.5s;
+  img{
+    width: 85%;
+    height: 75%;
+    border-radius: 10px;
+    border: 5px solid rgb(238, 228, 228);
+    @include iPhone5{
+      height: 65%;
+    }
+  }
+  .show__food{
+    width: 100%;
+    height: 100%;
+  }
+  .close-btn{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+    @include Mobile{
+      right: 5px;
+      font-size: 25px;
+    }
+    &:hover{
+      color: $color-light;
+    }
+  }
+  .foodLightBox__name{
+    color: $color-light;
+    font-size: 30px;
+  }
+  .foodLightBox__price{
+    color: $color-light;
+    font-size: $text-xs;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background-color: $color-soup;
+    border: 1px solid $color-light;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
+  .next-btn, .prev-btn{
+    position: absolute;
+    top: 50%;
+    color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%);
+    font-size: $text-sm;
+    &:hover{
+      color: $color-light;
+    }
+  }
+  .next-btn{
+    right: 10px;
+    @include Mobile{
+      right: 5px;
+    }
+  }
+  .prev-btn{
+    left: 10px;
+    @include Mobile{
+      left: 5px;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,9 @@
+.col-md-6{
+  width: calc((100% - 50px) / 2);
+  @include Mobile-horizontal{
+    width: 100%;
+  }
+}
+.col-md-4{
+  width: calc((100% - 80px) / 3);
+}

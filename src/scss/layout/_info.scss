@@ -1,0 +1,70 @@
+.info{
+  width: 100%;
+  height: 320px;
+  background-image: url(../images/info-background-1.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include iPhone6-horizontal{
+    background-attachment: scroll;
+    background-size: contain;
+  }
+  @include Mobile-horizontal{
+    background-attachment: scroll;
+    background-size: cover;
+    height: 180px;
+  }
+  .info__title{
+    top: 110px;
+    left: 20%;
+    display: inline-block;
+    width: 600px;
+    font-size: $text-md;
+    color: rgb(68, 95, 69);
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px gray;
+    letter-spacing: 15px;
+    @include desktop-md{
+      left: 60px;
+    }
+    @include Mobile-horizontal{
+      font-size: 25px;
+      width: 450px;
+    }
+    @include Mobile{
+      font-size: 20px;
+      width: 100%;
+      left: 0;
+      text-align: center;
+    }
+    @include iPhone5{
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 5px;
+      top: 70px;
+    }
+  }
+  .info__img{
+    top: -70px;
+    right: 50px;;
+    transform: scale(1.2);
+    @include desktop-md{
+      transform: scale(1.0);
+    }
+    @include tablet-horizontal{
+      top: -150px;
+      right: 0px;
+      transform: scale(0.8);
+    }
+    @include iPhone6-horizontal{
+      transform: scale(0.6);
+    }
+    @include Mobile-horizontal{
+      transform: scale(0.6);
+    }
+    @include iPhone5{
+      transform: scale(0.45);
+    }
+  }
+}
+

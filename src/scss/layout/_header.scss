@@ -1,0 +1,98 @@
+header{
+  width: 100%;
+  height: 90vh;
+  margin-top: 104px;
+  background-image: url(../images/Banner.png);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-left: 15px solid $color-secondary;
+  border-right: 15px solid $color-secondary;
+  border-bottom: 15px solid $color-secondary;
+  z-index: 3;
+  @include iPhone-X-horizontal{
+    margin-top: 84px;
+  }
+  @include iPhone6-horizontal{
+    margin-top: 84px;
+  }
+  @include Mobile-horizontal{
+    margin-top: 84px;
+  }
+  @include Mobile{
+    margin-top: 63px;
+  }
+  .header__title{
+    width: 40%;
+    height: auto;
+    padding: 0 5px 50px 5px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-bottom-right-radius: 20px;
+    top: 0%;
+    left: 0%;
+    @include tablet-horizontal{
+      width: 100%;
+    }
+    @include iPhone-X-horizontal{
+      padding: 0 5px 10px 5px;
+      border-bottom-right-radius: 0;
+    }
+    @include tablet{
+      border-bottom-right-radius: 0;
+    }
+    @include iPhone6-horizontal{
+      padding: 0 5px 10px 5px;
+    }
+    @include Mobile-horizontal{
+      padding: 5px 5px;
+    }
+    h1{
+      color: $color-light;
+      font-weight: 500;
+      font-style: italic;
+      font-family: 'Fredericka the Great', cursive;
+      font-size: $text-xl;
+      @include iPhone-X-horizontal{
+        margin: 15px 0;
+      }
+      @include iPhone6-horizontal{
+        margin: 15px 0;
+      }
+      @include Mobile-horizontal{
+        font-size: 35px;
+        margin: 0.5em 0;
+      }
+    }
+    p{
+      color: $color-light;
+      font-style: italic;
+      font-size: $text-xs;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+  }
+  .header__btn{
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid $color-light;
+    font-size: $text-md;
+    font-weight: 100;
+    color: $color-light;
+    line-height: 1.2;
+    @include Mobile-horizontal{
+      bottom: 20px;
+    }
+  }
+  .header__btn__mask{
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
+    transform: scale(0.0);
+    transition: all 1.0s;
+  }
+}
