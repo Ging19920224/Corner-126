@@ -23,7 +23,7 @@ const foodMenu = {
   },
 };
 
-axios.get('../assets/image.json').then((response) => {
+axios.get('../data/image.json').then((response) => {
   const arr = response.data;
   foodMenu.all.menu = response.data;
   foodMenu.all.sum = foodMenu.all.menu.length;

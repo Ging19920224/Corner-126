@@ -15,7 +15,6 @@ const png = 'rice.png';
 require('../images/' + jpg);
 require('../images/' + png);
 
-
 let screenWidth = window.screen.width;
 let screenHeight = window.screen.height;
 const titles = [$('#environment'), $('#about'), $('#food-menu'), $('#evaluation'), $('#contact')];
@@ -85,3 +84,10 @@ $(document).ready(() => {
     popularity.prev(screenWidth);
   });
 });
+
+// const data_obj = require("../data/image.json");
+
+// function ouputData(){
+//   console.log(data_obj);
+// }
+// ouputData();

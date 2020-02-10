@@ -41,6 +41,12 @@ module.exports = {
               name: '[path][name].[ext]'
             }
           },
+          // {
+          //   loader: 'url-loader',
+          //   options: {
+          //     limit: 8192
+          //   }
+          // },
           {
             loader: 'image-webpack-loader',
             options: {
@@ -76,7 +82,7 @@ module.exports = {
       {
         test: /\.(css|sass|scss)$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-      }
+      },
       // {
       //   test: /\.(css|sass|scss)$/,
       //   use: extractCSS.extract(['css-loader', 'postcss-loader', 'sass-loader'])
@@ -86,7 +92,7 @@ module.exports = {
   plugins: [
     // extractCSS,
     new CopyWebpackPlugin([
-      { from: 'assets', to: 'assets' },
+      { from: 'data', to: 'data' }
     ])
   ]
 };
