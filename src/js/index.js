@@ -32,14 +32,6 @@ function appear(target) {
     }
   });
 }
-function closeBtn() {
-  $(document).on('click', '.close-btn', () => {
-    $('.show__food').html('');
-    $('.foodLightBox').css('width', '0').css('height', '0').css('opacity', '0')
-      .css('z-index', '-5');
-    lightBox.open(data.foodMenu.all.menu);
-  });
-}
 
 $(document).ready(() => {
   loading.loading();
@@ -53,7 +45,7 @@ $(document).ready(() => {
   lightBox.open(data.foodMenu.all.menu);
   lightBox.nextImg(data.foodMenu.all.menu, data.foodMenu.all.sum);
   lightBox.prevImg(data.foodMenu.all.menu, data.foodMenu.all.sum);
-  closeBtn();
+  lightBox.closeBtn(data.foodMenu.all.menu);
   popularity.setCount(screenWidth);
   popularity.setBaseWidth();
   popularity.setWidth(screenWidth);

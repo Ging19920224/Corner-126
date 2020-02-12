@@ -25,6 +25,19 @@ function getImg(id, foodMenu) {
     default:
   }
 }
+function openON(foodMenu) {
+  $(document).on('click','.food-btn', (e) => {
+    $('.foodLightBox').css('opacity', '1').css('z-index', '99').css('width', imgWidth)
+    .css('height', imgHeight);
+    if(e.target.tagName === 'A'){
+      id = Number(e.target.dataset.id);
+    }else{
+      id = Number(e.target.parentNode.dataset.id);
+    }
+    getImg(id, foodMenu);
+    $(document).off('click', '.food-btn');
+  });
+}
 
 export default {
   setSize: (screenHeight, screenWidth) => {
@@ -52,12 +65,17 @@ export default {
     }
   },
   open: (foodMenu) => {
-    $('.food-btn').on('click', (e) => {
+    $(document).on('click', '.food-btn', (e) => {
+      console.log(e);
       $('.foodLightBox').css('opacity', '1').css('z-index', '99').css('width', imgWidth)
       .css('height', imgHeight);
-      id = Number(e.target.parentNode.dataset.id);
+      if(e.target.tagName === 'A' || e.target.tagName === 'LI'){
+        id = Number(e.target.dataset.id);
+      }else{
+        id = Number(e.target.parentNode.dataset.id);
+      }
       getImg(id, foodMenu);
-      $('.food-btn').off('click');
+      $(document).off('click', '.food-btn');
     });
   },
   nextImg: (foodMenu, sum) => {
@@ -74,6 +92,14 @@ export default {
       id -= 1;
       $('.show__food').html('');
       getImg(id, foodMenu);
+    });
+  },
+  closeBtn: (foodMenu) => {
+    $(document).on('click', '.close-btn', () => {
+      $('.show__food').html('');
+      $('.foodLightBox').css('width', '0').css('height', '0').css('opacity', '0')
+        .css('z-index', '-5');
+      openON(foodMenu);
     });
   }
 }
