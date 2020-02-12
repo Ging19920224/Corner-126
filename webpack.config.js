@@ -1,7 +1,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const extractCSS = new ExtractTextPlugin('css/[name].css');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractCSS = new ExtractTextPlugin('css/[name].css');
 module.exports = {
   mode: process.env.NODE_ENV,
   context: path.resolve(__dirname, 'src'),
@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js?[hash:8]'
   },
   devServer: {
     compress: true,
@@ -41,12 +41,6 @@ module.exports = {
               name: '[path][name].[ext]'
             }
           },
-          // {
-          //   loader: 'url-loader',
-          //   options: {
-          //     limit: 8192
-          //   }
-          // },
           {
             loader: 'image-webpack-loader',
             options: {
@@ -70,27 +64,35 @@ module.exports = {
         ],
       },
       {
-        test: /\.json$/,
-        use: [
-          { loader: 'json-loader' }
-        ]
-      },
-      {
         test: /\.(js)$/,
         use: 'babel-loader'
       },
-      {
-        test: /\.(css|sass|scss)$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-      },
       // {
       //   test: /\.(css|sass|scss)$/,
-      //   use: extractCSS.extract(['css-loader', 'postcss-loader', 'sass-loader'])
+      //   use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       // },
+      {
+        test: /\.(css|sass|scss)$/,
+        use: extractCSS.extract([
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          },
+          {
+            loader: 'sass-loader',
+          }
+        ])
+      },
     ]
   },
   plugins: [
-    // extractCSS,
+    extractCSS,
     new CopyWebpackPlugin([
       { from: 'data', to: 'data' }
     ])

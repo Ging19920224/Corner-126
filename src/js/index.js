@@ -6,7 +6,6 @@ import data from './data.js';
 import loading from './loading.js';
 import nav from './navigation.js';
 import header from './header.js';
-import foodMenu from './foodMenu.js';
 import lightBox from './lightBox.js';
 import popularity from './popularity.js';
 
@@ -50,10 +49,6 @@ $(document).ready(() => {
   titles.forEach((item) => {
     appear(item);
   });
-  foodMenu.createList(data.foodMenu.noodle);
-  foodMenu.createList(data.foodMenu.rice);
-  foodMenu.createList(data.foodMenu.soup);
-  foodMenu.createList(data.foodMenu.vegetables);
   lightBox.setSize(screenHeight, screenWidth);
   lightBox.open(data.foodMenu.all.menu);
   lightBox.nextImg(data.foodMenu.all.menu, data.foodMenu.all.sum);
@@ -84,10 +79,3 @@ $(document).ready(() => {
     popularity.prev(screenWidth);
   });
 });
-
-// const data_obj = require("../data/image.json");
-
-// function ouputData(){
-//   console.log(data_obj);
-// }
-// ouputData();

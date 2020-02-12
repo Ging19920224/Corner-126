@@ -1,4 +1,5 @@
 import axios from 'axios';
+import menu from './foodMenu.js';
 
 const foodMenu = {
   noodle: {
@@ -51,6 +52,10 @@ axios.get('../data/image.json').then((response) => {
     }
     return prev;
   }, []);
+  menu.createList(foodMenu.noodle);
+  menu.createList(foodMenu.rice);
+  menu.createList(foodMenu.soup);
+  menu.createList(foodMenu.vegetables);
 }).catch(() => {
   // console.log(error);
 });
