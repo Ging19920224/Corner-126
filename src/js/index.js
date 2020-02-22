@@ -41,11 +41,6 @@ $(document).ready(() => {
   titles.forEach((item) => {
     appear(item);
   });
-  lightBox.setSize(screenHeight, screenWidth);
-  lightBox.open(data.foodMenu.all.menu);
-  lightBox.nextImg(data.foodMenu.all.menu, data.foodMenu.all.sum);
-  lightBox.prevImg(data.foodMenu.all.menu, data.foodMenu.all.sum);
-  lightBox.closeBtn(data.foodMenu.all.menu);
   popularity.setCount(screenWidth);
   popularity.setBaseWidth();
   popularity.setWidth(screenWidth);

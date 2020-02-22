@@ -1,6 +1,9 @@
 import axios from 'axios';
 import menu from './foodMenu.js';
+import lightBox from './lightBox.js';
 
+let screenWidth = window.screen.width;
+let screenHeight = window.screen.height;
 const foodMenu = {
   noodle: {
     menu: [],
@@ -56,6 +59,11 @@ axios.get('data/image.json').then((response) => {
   menu.createList(foodMenu.rice);
   menu.createList(foodMenu.soup);
   menu.createList(foodMenu.vegetables);
+  lightBox.setSize(screenHeight, screenWidth);
+  lightBox.open(foodMenu.all.menu);
+  lightBox.nextImg(foodMenu.all.menu, foodMenu.all.sum);
+  lightBox.prevImg(foodMenu.all.menu, foodMenu.all.sum);
+  lightBox.closeBtn(foodMenu.all.menu);
 }).catch(() => {
   // console.log(error);
 });
