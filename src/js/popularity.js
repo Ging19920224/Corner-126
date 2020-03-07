@@ -136,9 +136,9 @@ export default {
   },
   reset: () => {
     itemID.forEach((item) => {
-      $(`#${item}`).animate({ left: `0px` }, 600);
+      $(`#${item}`).animate({ left: '0px' }, 600);
     });
     $('#next').off('click');
     $('#prev').off('click');
-  }
-}
+  },
+};

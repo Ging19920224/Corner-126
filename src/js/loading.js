@@ -12,5 +12,5 @@ export default {
     $('.loading__mask').css('transform', 'rotateY(180deg)');
     setTimeout(loadingRotate, 1100);
     setTimeout(loadingDisappear, 2100);
-  }
-}
+  },
+};

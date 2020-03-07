@@ -1,15 +1,16 @@
+/* eslint-disable eqeqeq */
 import $ from 'jquery';
 
 let imgHeight;
 let imgWidth;
 let id = 0;
 
-function getImg(id, foodMenu) {
-  const obj = foodMenu.filter((item) => item.id == id);
+function getImg(getID, foodMenu) {
+  const obj = foodMenu.filter((item) => item.id == getID);
   const { type } = obj[0];
   if (!type) return;
   $('.foodLightBox').css('opacity', '1').css('z-index', '99').css('width', imgWidth)
-      .css('height', imgHeight);
+    .css('height', imgHeight);
   const domM = `<a href="javascript:;" class="close-btn"><i class="fas fa-times-circle"></i></a><img src="${obj[0].imgUrl}"><p class="foodLightBox__name text--center mt--10">${obj[0].name}</p><p class="text--center mt--10"><span class="foodLightBox__price">小碗 $ ${obj[0].price_s}</span><span class="foodLightBox__price">大碗 $ ${obj[0].price_m}</span></p>`;
   const domS = `<a href="javascript:;" class="close-btn"><i class="fas fa-times-circle"></i></a><img src="${obj[0].imgUrl}"><p class="foodLightBox__name text--center mt--10">${obj[0].name}</p><p class="text--center mt--10"><span class="foodLightBox__price">小碗 $ ${obj[0].price_s}</span></p>`;
   switch (type) {
@@ -29,12 +30,12 @@ function getImg(id, foodMenu) {
   }
 }
 function openON(foodMenu) {
-  $(document).on('click','.food-btn', (e) => {
+  $(document).on('click', '.food-btn', (e) => {
     $('.foodLightBox').css('opacity', '1').css('z-index', '99').css('width', imgWidth)
-    .css('height', imgHeight);
-    if(e.target.tagName === 'A'){
+      .css('height', imgHeight);
+    if (e.target.tagName === 'A') {
       id = Number(e.target.dataset.id);
-    }else{
+    } else {
       id = Number(e.target.parentNode.dataset.id);
     }
     getImg(id, foodMenu);
@@ -69,9 +70,9 @@ export default {
   },
   open: (foodMenu) => {
     $(document).on('click', '.food-btn', (e) => {
-      if(e.target.tagName === 'A' || e.target.tagName === 'LI'){
+      if (e.target.tagName === 'A' || e.target.tagName === 'LI') {
         id = Number(e.target.dataset.id);
-      }else{
+      } else {
         id = Number(e.target.parentNode.dataset.id);
       }
       getImg(id, foodMenu);
@@ -101,5 +102,5 @@ export default {
         .css('z-index', '-5');
       openON(foodMenu);
     });
-  }
-}
+  },
+};

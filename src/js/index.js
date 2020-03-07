@@ -1,13 +1,16 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable prefer-template */
+/* eslint-disable import/no-dynamic-require */
 import '../scss/index.scss';
 import '../index.html';
 import '@babel/polyfill';
 import $ from 'jquery';
-import data from './data.js';
-import loading from './loading.js';
-import nav from './navigation.js';
-import header from './header.js';
-import lightBox from './lightBox.js';
-import popularity from './popularity.js';
+import data from './data';
+import loading from './loading';
+import nav from './navigation';
+import header from './header';
+import lightBox from './lightBox';
+import popularity from './popularity';
 
 const jpg = 'person1.jpg';
 const png = 'rice.png';
@@ -50,7 +53,7 @@ $(document).ready(() => {
     const navHeight = $('nav').height() + 20;
     let target = $(e.target.parentNode.hash);
     if (!e.target.parentNode.hash) {
-      target = $(e.target.parentNode.parentNode.hash); 
+      target = $(e.target.parentNode.parentNode.hash);
     }
     $('html,body').animate({ scrollTop: target.offset().top - navHeight }, 800);
   });

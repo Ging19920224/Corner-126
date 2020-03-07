@@ -1,9 +1,9 @@
 import axios from 'axios';
-import menu from './foodMenu.js';
-import lightBox from './lightBox.js';
+import menu from './foodMenu';
+import lightBox from './lightBox';
 
-let screenWidth = window.screen.width;
-let screenHeight = window.screen.height;
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
 const foodMenu = {
   noodle: {
     menu: [],
@@ -70,4 +70,4 @@ axios.get('data/image.json').then((response) => {
 
 export default {
   foodMenu,
-}
+};

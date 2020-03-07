@@ -3,10 +3,10 @@ import $ from 'jquery';
 export default {
   navBottom: () => {
     $('li').on('mouseenter', (e) => {
-      const bottom = $('#'+e.target.dataset.id).find('.nav__list--border');
+      const bottom = $(`#${e.target.dataset.id}`).find('.nav__list--border');
       $(bottom).stop(true, false).animate({ width: '100%' }, 300);
     }).on('mouseleave', (e) => {
-      const bottom = $('#'+e.target.dataset.id).find('.nav__list--border');
+      const bottom = $(`#${e.target.dataset.id}`).find('.nav__list--border');
       $(bottom).stop(true, false).animate({ width: '0%' }, 300);
     });
   },
@@ -15,4 +15,4 @@ export default {
       $('.nav__list').slideToggle(500);
     });
   },
-}
+};

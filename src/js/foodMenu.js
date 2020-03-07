@@ -38,5 +38,5 @@ export default {
         break;
       default:
     }
-  }
-}
+  },
+};
